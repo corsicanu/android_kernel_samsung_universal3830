@@ -60,7 +60,7 @@ jobs:
             make CC=clang ARCH=arm64 exynos850-"$variant"_defconfig
             make CC=clang ARCH=arm64 -j$jobs
             cp -r arch/arm64/boot/Image hk-out/$variant/prebuilt/kernel
-            mkdtimg cfg_create hk-out/$variant/prebuilt/dtbo hk-out/dtconfigs/$variant.cfg -d arch/arm64/boot/dts/samsung
+            mkdtimg cfg_create hk-out/$variant/prebuilt/dtbo hk-out/dtconfigs/$variant.cfg -d arch/arm64/boot/dts/samsung/a13
             mkdtimg cfg_create hk-out/$variant/prebuilt/dtb hk-out/dtconfigs/exynos3830.cfg -d arch/arm64/boot/dts/exynos
           done
           rm -rf hk-out/dtconfigs
